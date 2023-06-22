@@ -1,0 +1,25 @@
+#Sure! If you don’t want to use a package manager, you can download the OpenSSL source code and compile it yourself. Here’s an example of how you might do this:
+#Make sure you have the Xcode Command Line Tools installed on your Mac. You can install them by opening a terminal window and running the following command:
+xcode-select --install
+#Download the latest version of the OpenSSL source code from the OpenSSL website. You can do this by opening a terminal window and using the curl command to download the source code archive. For example, to download version 1.1.1l of OpenSSL, you can use the following command:
+
+>curl -O https://www.openssl.org/source/openssl-1.1.1l.tar.gz
+
+#Extract the source code archive by running the tar command. For example, to extract the openssl-1.1.1l.tar.gz archive that you downloaded in the previous step, you can use the following command:
+
+>tar xvf openssl-1.1.1l.tar.gz
+
+#Change to the extracted source code directory by running the cd command. For example, to change to the openssl-1.1.1l directory that was created when you extracted the source code archive, you can use the following command:
+
+>cd openssl-1.1.1l
+
+#Configure and compile the OpenSSL source code by running the ./config and make commands:
+
+>./config
+>make
+
+#Install OpenSSL by running the make install command with superuser privileges:
+
+>make install #(make sure you are logged in as root else use sudo)
+
+#After completing these steps, you should have a newer version of OpenSSL installed on your Mac. You might need to update your PATH environment variable to ensure that your shell uses the newly-installed version of the openssl command instead of the older version that comes with macOS.
